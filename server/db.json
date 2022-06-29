@@ -17,18 +17,18 @@
       
      
     ],
-    "Mun": [
+    "mun": [
       {
-        "id_mun": 1,
-        "name": "Books"
+        "id": 1,
+        "nombre": "Jaguey Grande"
       },
       {
-        "id_mun": 2,
-        "name": "Electronics"
+        "id": 2,
+        "nombre": "Jovellanos"
       },
       {
-        "id_mun": 3,
-        "name": "Computers"
+        "id": 3,
+        "nombre": "Colon"
       }
     ],
     "products": [
