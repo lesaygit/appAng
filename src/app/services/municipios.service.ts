@@ -8,12 +8,12 @@ import { Municipio } from '../interfaces/municipios.interface';
 })
 export class MunicipiosService {
 
-  private URL_BASE = "http://localhost:3000/";
-  private RUTA = "mun";
+  private URL = "http://localhost:3000/";
 
   constructor(private http: HttpClient) {}
 
   getMunicipios(): Observable<Municipio []> {
-    return this.http.get<Municipio []>(this.URL_BASE+this.RUTA);
+    const Ruta = "mun";
+    return this.http.get<Municipio []>(this.URL+Ruta);
   }
 }
