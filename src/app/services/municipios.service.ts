@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { municipio } from '../interfaces/municipios.interface';
+import { Municipio } from '../interfaces/municipios.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MunicipiosService {
 
-  private URL = "http://localhost:3000/mun";
+  private URL_BASE = "http://localhost:3000/";
+  private RUTA = "mun";
 
   constructor(private http: HttpClient) {}
 
-  getMunicipios(): Observable<municipio []> {
-    return this.http.get<municipio []>(this.URL);
+  getMunicipios(): Observable<Municipio []> {
+    return this.http.get<Municipio []>(this.URL_BASE+this.RUTA);
   }
 }
