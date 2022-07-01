@@ -13,7 +13,7 @@ export class MunicipiosService {
   constructor(private http: HttpClient) {}
 
   getMunicipios(): Observable<Municipio []> {
-    const Ruta = "mun";
-    return this.http.get<Municipio []>(this.URL+Ruta);
+    const urlGetMunicipios = this.URL+'mun';
+    return this.http.get<Municipio []>(urlGetMunicipios);
   }
 }
