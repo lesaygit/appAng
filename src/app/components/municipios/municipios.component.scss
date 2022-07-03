@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+caption {
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 50px;
+  padding-bottom: 18px;
+  text-align: left;
+}
+
+table {
+  width: 40%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: solid 1px black;
+  padding: 12px;
+}
+
+thead {
+  background-color: cornflowerblue;
+  color: white;
+  border-bottom: solid 3px black;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+tr:hover td{
+  background-color:cornflowerblue;
+  color: white;
+}
