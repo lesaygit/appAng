@@ -9,12 +9,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MunicipiosService } from './services/municipios.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MunicipiosComponent } from './components/municipios/municipios.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
+    MunicipiosComponent
   ],
   imports: [
     BrowserModule,

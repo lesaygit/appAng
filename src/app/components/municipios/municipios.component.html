@@ -1,0 +1,19 @@
+<div class="container">
+  <table>
+    <caption>
+      Municipios
+    </caption>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NOMBRE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let municipio of municipios">
+        <td>{{municipio.id}}</td>
+        <td>{{municipio.nombre}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
