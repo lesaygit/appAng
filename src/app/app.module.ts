@@ -5,18 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { MunicipiosService } from './services/municipios.service';
-import { HttpClientModule } from '@angular/common/http';
 import { MunicipiosComponent } from './components/municipios/municipios.component';
+import { MunicipiosService } from './services/municipios.service';
+import { ProductosComponent } from './components/productos/productos.component';
+import { ProductosService } from './services/productos.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    MunicipiosComponent
+    MunicipiosComponent,
+    ProductosComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,10 @@ import { MunicipiosComponent } from './components/municipios/municipios.componen
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [MunicipiosService],
+  providers: [
+    MunicipiosService,
+    ProductosService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
