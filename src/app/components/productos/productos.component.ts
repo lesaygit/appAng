@@ -10,6 +10,7 @@ import { ProductosService } from 'src/app/services/productos.service';
 export class ProductosComponent implements OnInit {
 
   productos!: Producto [];
+  displayedColumns = ['id', 'name', 'description', 'price', 'stock'];
 
   constructor(public productosService: ProductosService) { }
 
