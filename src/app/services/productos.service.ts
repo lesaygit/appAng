@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { catchError, Observable, } from 'rxjs';
 import { Producto } from '../interfaces/productos.interface';
 import { environment } from 'src/environments/environment';
 
@@ -13,6 +13,10 @@ export class ProductosService {
 
   getProductos(): Observable<Producto []> {
     const urlGetProductos = environment.url+'products';
-    return this.http.get<Producto []>(urlGetProductos)
+    return this.http.get<Producto []>(urlGetProductos).pipe(
+      catchError(error => {
+        throw new Error('Problemas de conexion con la API');
+      })
+    )
   }
 }
